@@ -14,7 +14,7 @@
 // Do not load directly.
 defined( 'ABSPATH' ) || die();
 
-if ( 'lightning' === get_template() || 'lightning-pro' === get_template() ) {
+if ( 'lightning-pro' === get_template() ) {
 	$data = get_file_data( __FILE__, array( 'version' => 'Version' ) );
 	define( 'ML_VERSION', $data['version'] );
 	define( 'ML_PATH', plugin_dir_path( __FILE__ ) );

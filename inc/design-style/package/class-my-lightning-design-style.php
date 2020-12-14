@@ -18,6 +18,7 @@ class My_Lightning_Design_Style {
 		add_action( 'lightning_mainSection_append', array( __CLASS__, 'add_main_section_append_html' ) );
 		add_filter( 'lightning_article_outer_class', array( __CLASS__, 'add_article_outer_class' ) );
 		add_action( 'wp_head', array( __CLASS__, 'render_style' ), 6 );
+		add_action( 'after_setup_theme', array( __CLASS__, 'remove_actions' ), 9999 );
 	}
 
 	/**
@@ -92,6 +93,17 @@ class My_Lightning_Design_Style {
 		$dynamic_css = preg_replace( '/\s(?=\s)/', '', $dynamic_css );
 		wp_add_inline_style( 'lightning-design-style', $dynamic_css );
 
+	}
+
+	/**
+	 * Remove Actions
+	 */
+	public static function remove_actions() {
+		$current_skin = get_option( 'lightning_design_skin' );
+		if ( 'variety' === $current_skin || 'variety-bs4' === $current_skin ) {
+			remove_filter( 'lightning_panListHtml', 'ltg_variety_panList' );
+			remove_action( 'lightning_footer_before', 'ltg_variety_panlist_print_footer' );
+		}
 	}
 }
 

@@ -8,5 +8,5 @@
 if ( ! class_exists( 'My_Lightning_Design_Style' ) ) {
 	global $my_lightning_design_style_url;
 	$my_lightning_design_style_url = plugin_dir_url( __FILE__ );
-	require_once diname( __FILE__ ) . '/package/class-my-lightning-design-style.php';
+	require_once dirname( __FILE__ ) . '/package/class-my-lightning-design-style.php';
 }

@@ -25,7 +25,7 @@ class My_Lightning_Design_Style {
 	 * Add Main Section Prepend HTML
 	 */
 	public static function add_main_section_prepend_html() {
-		if ( is_home() || is_archive() ) {
+		if ( is_home() || is_archive() || is_search() || is_404() ) {
 			echo '<div class="archive-outer">';
 		}
 	}
@@ -34,7 +34,7 @@ class My_Lightning_Design_Style {
 	 * Add Main Section Append HTML
 	 */
 	public static function add_main_section_append_html() {
-		if ( is_home() || is_archive() ) {
+		if ( is_home() || is_archive() || is_search() || is_404() ) {
 			echo '</div>';
 		}
 	}

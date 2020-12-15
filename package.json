@@ -1,0 +1,24 @@
+{
+  "name": "my-lightning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drill-lancer/my-lightning.git"
+  },
+  "author": "DRILL LANCER",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/drill-lancer/my-lightning/issues"
+  },
+  "homepage": "https://github.com/drill-lancer/my-lightning#readme",
+  "devDependencies": {
+    "@wordpress/env": "^2.1.0",
+    "gulp": "^4.0.2",
+    "npm-check-updates": "^10.2.5"
+  }
+}
